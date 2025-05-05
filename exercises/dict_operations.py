@@ -19,5 +19,16 @@ def student_dict_operations(students_dict, operation, *args):
     返回:
     - 根据操作返回不同结果
     """
+    if operation == "add":
+        students_dict[args[0]] = args[1]
+        return students_dict
+    elif operation == "remove":
+       students_dict.pop(args[0]) 
+       return students_dict
+    elif operation == "update":
+        students_dict.update({args[0] : args[1]})
+        return students_dict
+    elif operation == "get":
+        return students_dict.get(args[0])
     # 请在下方编写代码
-    pass 
+     
